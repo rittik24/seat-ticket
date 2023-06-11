@@ -17,7 +17,7 @@ const Ticket = () => {
     setSeat(e.target.value)
   }
   const getData = async () => {
-    let r = await fetch(`http://localhost:8080`)
+    let r = await fetch(`https://lazy-pink-coypu-hem.cyclic.app`)
     let d = await r.json()
     setData(d)
   }
@@ -41,7 +41,7 @@ const Ticket = () => {
 
   const seatBook = async () => {
     try {
-      let r = await fetch(`http://localhost:8080/data`, {
+      let r = await fetch(`https://lazy-pink-coypu-hem.cyclic.app/data`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
